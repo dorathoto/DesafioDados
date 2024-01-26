@@ -30,7 +30,7 @@ namespace DesafioDados
         {
             con.Write(White, $"Face {face}    ");
             con.Write(Black, $" Qtd.: {qtd}    ");
-            con.Write(Yellow, $"Porc.: {porcentagem}%");
+            con.Write(Yellow, "Porc.: "+ String.Format("{0:F9}", porcentagem) + "%");
             con.WriteLine("");
         }
 

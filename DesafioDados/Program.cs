@@ -3,7 +3,7 @@ using DesafioDados;
 using Konsole;
 void Wait() => Console.ReadKey(true); //não fecha a tela
 const int leftQtd = 1000;
-const int rightQtd = 30000000;
+const int rightQtd = 10000000;
 var janelaSemPeso = MontaTela.MontarCaixaJanela("Sem PESO", corBackground: ConsoleColor.Blue);
 
 
@@ -23,7 +23,7 @@ MontaTela.EscreverNaTelaPlacar(left, objDado100k._placar);
 
 #region Jogada1M
 
-var right = janelaSemPeso.SplitRight("30M");
+var right = janelaSemPeso.SplitRight("10M");
 var pbR = new ProgressBar(right, rightQtd);
 var objDado1M = new JogoDados
 {
@@ -54,7 +54,7 @@ MontaTela.EscreverNaTelaPlacar(leftComPeso, objDado100kComPeso._placar);
 #endregion
 
 #region Jogada100k
-var rightComPeso = janelaComPeso.SplitRight("30M");
+var rightComPeso = janelaComPeso.SplitRight("10M");
 var pbRComPeso = new ProgressBar(rightComPeso, rightQtd);
 var objDado1MComPeso = new JogoDados
 {
