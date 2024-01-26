@@ -17,11 +17,11 @@ namespace DesafioDados
             return janela;
         }
         
-        public static void EscreverNaTelaPlacar(IConsole left, List<DesafioDados.Model.Placar> retorno)
+        public static void EscreverNaTelaPlacar(IConsole con, List<DesafioDados.Model.Placar> retorno)
         {
             foreach (var item in retorno)
             {
-                Tick(left, item.Face, item.Qtd, item.Porcentagem);
+                Tick(con, item.Face, item.Qtd, item.Porcentagem);
             }
         }
 
@@ -29,7 +29,7 @@ namespace DesafioDados
         static void Tick(IConsole con, string face, int qtd, decimal porcentagem)
         {
             con.Write(White, $"Face {face}    ");
-            con.Write(Black, $" Qtd.: {face}    ");
+            con.Write(Black, $" Qtd.: {qtd}    ");
             con.Write(Yellow, $"Porc.: {porcentagem}%");
             con.WriteLine("");
         }
